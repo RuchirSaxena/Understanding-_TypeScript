@@ -1,0 +1,92 @@
+﻿TypeScript
+--------------
+TypeScript is a typed superset of javascript that compiles to plain javascript
+ie. Basically the code written in Typescript is complied to javascript using a 
+transpiler(converts one language code to another language) in typescript its 
+TSC(Typescript Compiler)
+
+Advantages of Typescripts :
+----------------------------
+1. It gives feeling of code similar to object oriented languages like C#,Java
+so the developers coming from that background fells comfortable in writing 
+typescript code compared to javascript code
+
+2. We can use classes , interfaces , access modifiers etc. similar to that of
+c# and java
+
+3.Designed to be used in developmnet of large application
+
+4.Typescript uses static type checking
+5. Class based objects
+6. Its modular
+7.We can use ES6 in Typescript
+8.No Prototypes
+9.Inheritance
+10.Acess modifiers
+
+
+Disadvantages of Typescripts :
+------------------------------
+1.All the code of Typescript is converted to Javascript equivelant but 
+we can not trace all code define in typescript to javascript
+Eg:
+
+Interface ICustomer {
+	addCusttomer();
+}
+
+
+Now the above defined interface cannot be traced in transpiled javascript code
+because there is not such thing in javascript
+
+class Customer{
+	protected string CustomerName;
+	private string CustomerCode;
+}
+
+class GoldCustomer extends Customer{
+	setCustomerName(){
+		CustomerName="Raj";
+	}
+	
+}
+
+Now in above example the protected and private variable of customer class will be defined
+as a public member of customer class in javascript equivalent code
+
+
+
+So bacically what we see in typescript we dont get it in javascript
+
+
+Module Loading in Typescript
+------------------------------------
+In Enterprise project we can create different modules and as per requirement 
+we can import those modules by using import and export keywords
+
+//Using export keyword to export these modules
+export class Address {
+    public Address: string;
+}
+
+//For importing address module in customer class
+import { Address } from "./Address"; 
+
+//Consuming Address module
+class Customer implements ICustomer {
+	public addressObj: Address = new Address();
+}
+Basically typescript uses export pattern we to perform module loading , so basically
+its  on demand loading and for that it need to use module loader 
+
+Further, We need a module loader like system.js , webpack ,require js 
+
+
+Types in Typescript
+
+String ,Number ,Boolean ,Array
+Any ,Void ,Null ,Tuple ,Enum ,Generics
+
+
+
+

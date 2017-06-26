@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Customer.js"></script>
+    <script src="systemjs/dist/system.js"></script>
+    <script >
+        System.config({
+            //Below property is telling to put .js after the file name
+            //Eg: when it encounters Customer it will load customer.js and so on
+            "defaultJSExtensions":true
+        });
+        System.import("Customer.js").
+            then(function (exports) {
+                var cust = new exports.Customer(); //Getting the cutomer module and creating its object
+            });
+
+
+        var objCust = new Customer();
+        //Setting value to a variable defined in a class
+        objCust.CustomerName = "Ruchir Saxena";
+        alert(objCust.CustomerName);
+        //Setting value to a private variable defined in a class through private variable
+        try{
+            objCust.CustomerCode = "";
+        } catch (ex) {
+            alert(ex);
+            objCust.CustomerCode = "N/A";
+        }
+       
+        //Getting value from property
+
+        alert(objCust.CustomerCode);
+        //acessing  function
+        objCust.GetCustomerType();
+        alert(objCust.ValidateData());
+        //Inheritance
+        objCust = new GoldCustomer();
+        //acessing  function
+        objCust.GetCustomerType();
+        
+
+    </script>
+</head>
+
+<body>
+<h2>Understanding Typescript</h2>
+</body>
+</html>

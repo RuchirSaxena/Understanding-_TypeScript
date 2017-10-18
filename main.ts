@@ -1,0 +1,2 @@
+
+//DECLARING VALIABLE IN Typescript

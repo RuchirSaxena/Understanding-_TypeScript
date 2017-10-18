@@ -1,4 +1,11 @@
-﻿TypeScript
+﻿Commands for TypeScript
+============================
+npm install -g typescript =>To install typescript globally
+
+tsc --version => To get the version of typescript
+
+
+TypeScript
 --------------
 TypeScript is a typed superset of javascript that compiles to plain javascript
 ie. Basically the code written in Typescript is complied to javascript using a 
@@ -83,7 +90,7 @@ Further, We need a module loader like system.js , webpack ,require js
 
 
 Types in Typescript
-
+=========================
 String ,Number ,Boolean ,Array
 Any ,Void ,Null ,Tuple ,Enum ,Generics
 

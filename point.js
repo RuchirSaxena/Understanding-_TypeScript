@@ -33,8 +33,8 @@ var Point = /** @class */ (function () {
             return this._y;
         },
         set: function (value) {
-            if (value < 0)
-                throw new Error('Value cannot be less than 0.');
+            /*  if(value<0)
+             throw new Error('Value cannot be less than 0.'); */
             this._y = value;
         },
         enumerable: true,

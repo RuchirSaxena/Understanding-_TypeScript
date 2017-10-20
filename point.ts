@@ -27,8 +27,8 @@ export class Point{
           return this._x;
       }
       set y(value){
-          if(value<0)
-          throw new Error('Value cannot be less than 0.');
+         /*  if(value<0)
+          throw new Error('Value cannot be less than 0.'); */
   
           this._y =value
       }

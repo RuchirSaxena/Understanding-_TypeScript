@@ -79,8 +79,8 @@ var drawPoint3 = function (point) {
     //your code
 };
 //The above has voilating the concept of cohesion (oops) which states that things which are related should be part of 1 unit
-var point_1 = require("./point");
-var point = new point_1.Point(10, 50);
+/* import{Point} from './point'
+let point=new Point(10,50); */
 //=>Private members can not be accesed outside
 //point.x=10; 
 //point.y=30;
@@ -88,4 +88,12 @@ var point = new point_1.Point(10, 50);
 /* point.x=10;
 point.y=70; */
 //Calling call method
-point.draw();
+//point.draw();
+var facebookTask_1 = require("./facebookTask");
+var objLikeStatus = new facebookTask_1.LikeStatus(10);
+objLikeStatus.like();
+objLikeStatus.like();
+objLikeStatus.like();
+objLikeStatus.like();
+objLikeStatus.like();
+objLikeStatus.unLike();
